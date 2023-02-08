@@ -63,3 +63,7 @@ Attempting to reduce the overfitting, we try to both increase the model dropout 
     * **attention_probs_dropout_prob** controls dropout ratio for the attention
     probabilities
 2. The learning rate scheduler used is a linear scheduler updated at each training step, as per [huggingface documentation](https://huggingface.co/docs/transformers/training#optimizer-and-learning-rate-scheduler)
+
+# Conclusions:
+
+The model already starts overfitting after a couple of epochs, most likely due to the huge number of parameters in BERT and the small size of the CoLA dataset. Adding a learning rate scheduler boosts the model's performance by roughly 2%, while increasing the dropout seems to have little positive impact.
