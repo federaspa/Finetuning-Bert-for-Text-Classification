@@ -67,3 +67,4 @@ Attempting to reduce the overfitting, we try to both increase the model dropout 
 # Conclusions:
 
 The model already starts overfitting after a couple of epochs, most likely due to the huge number of parameters in BERT and the small size of the CoLA dataset. Adding a learning rate scheduler boosts the model's performance by roughly 2%, while increasing the dropout seems to have little positive impact.
+Overall, we manage to get a Matthew Correlation Coefficient between 0.58 and 0.62.
